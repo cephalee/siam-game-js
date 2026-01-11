@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Siam Game</title>
+</head>
+<body>
+    <div id="playerTurn"></div>
+    <div class="container"><div id="gameBoard" class="gameBoard"></div></div>
+    <div>
+        <button id="resetButton" onclick="resetGame()">Restart Game</button>
+        <button id="cancelMoveButton" style="display: none;" onclick="cancelSelection()">Cancel</button>
+    </div>
+    <div id="winnerPopup" class="popup">
+        <div class="popup-content">
+            <h2 id="winnerMessage"></h2>
+            <p>Click below to play again!</p>
+            <button id="playAgainBtn" class="direction-button">Play Again</button>
+        </div>
+    </div>
+    <div id="directionPopup" style="display:none;">
+        <h2>Choose a Direction</h2>
+        <div>
+            <button class="direction-button" id="upBtn">
+                <img src="" alt="Up" id="up" class="direction-image">
+            </button>
+            <button class="direction-button" id="downBtn">
+                <img src="" alt="Down" id="down" class="direction-image">
+            </button>
+            <button class="direction-button" id="leftBtn">
+                <img src="" alt="Left" id="left" class="direction-image">
+            </button>
+            <button class="direction-button" id="rightBtn">
+                <img src="" alt="Right" id="right" class="direction-image">
+            </button>
+        </div>
+    </div>
+    <div id="popupOverlay"></div>
+
+    <div id="directionForShifting" style="display: none;">
+        <h2>Choose a Direction</h2>
+        <div class="direction-button"></div>
+    </div>
+    <script src="pieces.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
